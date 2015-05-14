@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+    <menu xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:demonews="http://schemas.android.com/apk/res-auto">
+        <item android:id="@+id/menu_picoftheday"
+            android:orderInCategory="100"
+            demonews:showAsAction="ifRoom"
+            android:title="@string/picoftheday" />
+
+        <item android:id="@+id/menu_breakingnews"
+            android:orderInCategory="100"
+            demonews:showAsAction="ifRoom"
+            android:title="@string/breakingnews" />
+
+        <item android:id="@+id/menu_about"
+            android:orderInCategory="100"
+            demonews:showAsAction="ifRoom"
+            android:title="@string/about" />
+
+    </menu>
