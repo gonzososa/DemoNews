@@ -1,28 +1,32 @@
 package com.outlook.gonzasosa.demos.news;
 
 import android.app.FragmentTransaction;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.NavUtils;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 
+/**
+ * Punto de entrada de la aplicación
+ */
 public class ActivityMain extends AppCompatActivity {
     @Override
     public void onCreate (Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.main_activity);
+        super.onCreate (savedInstanceState);
+        setContentView (R.layout.main_activity);
 
         if (getSupportActionBar() != null) {
-            getSupportActionBar().setDefaultDisplayHomeAsUpEnabled(false);
+            getSupportActionBar().setDefaultDisplayHomeAsUpEnabled (false);
             getSupportActionBar().setDisplayHomeAsUpEnabled (false);
         }
-
     }
 
     @Override
     public boolean onCreateOptionsMenu (Menu menu) {
-        getMenuInflater().inflate(R.menu.main_activity, menu);
+        getMenuInflater().inflate (R.menu.main_activity, menu);
         return true;
     }
 
@@ -30,8 +34,10 @@ public class ActivityMain extends AppCompatActivity {
     public boolean onOptionsItemSelected (MenuItem item) {
         switch (item.getItemId ()) {
             case R.id.menu_picoftheday:
+                loadImageOfDay ();
                 return true;
             case R.id.menu_breakingnews:
+                loadBreakingNews ();
                 return true;
             case R.id.menu_about:
                 loadAboutWindow ();
@@ -41,19 +47,18 @@ public class ActivityMain extends AppCompatActivity {
         }
     }
 
-    private void loadAboutWindow () {
-        android.support.v4.app.FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-        FragmentAbout about = new FragmentAbout ();
-        transaction.add (R.id.dummy, about);
-        transaction.setTransition (FragmentTransaction.TRANSIT_FRAGMENT_FADE);
-        transaction.commit ();
+    private void loadImageOfDay () {
+        Intent intent = new Intent (getBaseContext(), ActivityImageOfDay.class);
+        startActivity (intent);
     }
 
-    private void loadBreakingNew () {
-        android.support.v4.app.FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-        FragmentBreakingNews news = new FragmentBreakingNews ();
-        transaction.add (R.id.dummy, news);
-        transaction.setTransition (FragmentTransaction.TRANSIT_FRAGMENT_FADE);
-        transaction.commit ();
+    private void loadAboutWindow () {
+        Intent intent = new Intent (getBaseContext(), ActivityAbout.class);
+        startActivity(intent);
+    }
+
+    private void loadBreakingNews () {
+        Intent intent = new Intent (getBaseContext(), ActivityBreakingNews.class);
+        startActivity (intent);
     }
 }

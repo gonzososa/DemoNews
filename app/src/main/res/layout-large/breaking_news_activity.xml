@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <fragment class="com.outlook.gonzasosa.demos.news.FragmentBreakingNews"
+            android:id="@+id/frgBreakingNews"
+            android:layout_width="0dp"
+            android:layout_weight="30"
+            android:layout_height="wrap_content" />
+
+        <FrameLayout
+            android:id="@+id/dummyContent"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="70" />
+
+    </LinearLayout>

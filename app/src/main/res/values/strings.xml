@@ -3,4 +3,12 @@
     <string name="picoftheday">Picture of the day</string>
     <string name="breakingnews">Breaking News</string>
     <string name="about">About</string>
+    <string name="nombre">Nombre: </string>
+    <string name="me">Gonzalo Sosa</string>
+    <string name="direccion">Dirección: </string>
+    <string name="address">San Juan Tlihuaca #15</string>
+    <string name="telefono">Teléfono: </string>
+    <string name="phone">(044) 5555555</string>
+    <string name="correo">Correo: </string>
+    <string name="mail">gonzasosa@outlook.com</string>
 </resources>

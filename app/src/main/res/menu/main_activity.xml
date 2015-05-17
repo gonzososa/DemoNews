@@ -4,16 +4,19 @@
         <item android:id="@+id/menu_picoftheday"
             android:orderInCategory="100"
             demonews:showAsAction="ifRoom"
-            android:title="@string/picoftheday" />
+            android:title="@string/picoftheday"
+            android:icon="@drawable/nasa" />
 
         <item android:id="@+id/menu_breakingnews"
             android:orderInCategory="100"
             demonews:showAsAction="ifRoom"
-            android:title="@string/breakingnews" />
+            android:title="@string/breakingnews"
+            android:icon="@drawable/rss" />
 
         <item android:id="@+id/menu_about"
             android:orderInCategory="100"
             demonews:showAsAction="ifRoom"
-            android:title="@string/about" />
+            android:title="@string/about"
+            android:icon="@drawable/about" />
 
     </menu>
