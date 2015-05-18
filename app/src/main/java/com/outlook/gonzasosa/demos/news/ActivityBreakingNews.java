@@ -8,7 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 
 /**
- * Esta clase se encarga de mostrar el listado con las entradas RSS y manejar el evento
+ * Esta clase se encarga de mostrar el listado con las entradas RSS y maneja el evento
  * onItemClick del ListView
  *
  */
@@ -50,7 +50,7 @@ public class ActivityBreakingNews extends AppCompatActivity implements OnNewsSel
 
     /**
      * Este método se invoca cuando el usuario hace "tap" en un elemento de la lista de
-     * elementos del ListView
+     * entradas del ListView
      *
      * El detalle del elemento seleccionado se muestra en otro fragmento adyacente a la lista o
      * bien en un actividad completamente aparte.

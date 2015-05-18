@@ -21,10 +21,10 @@ import java.util.List;
 
 /**
  * Esta clase se encarga de descargar el archivo RSS especificado y
- * llenar el dataset correspodiente al ListView que que se presentará al usuario.
+ * llena el dataset correspodiente al ListView que que se presentará al usuario.
  *
  * Se utiliza un fragmento para presentar una interfaz más adecuada en caso que
- * el usuario utiliza un dispositivo de pantalla grande.
+ * el usuario utilice un dispositivo de pantalla grande.
  */
 public class FragmentBreakingNews extends Fragment {
     final String URL_BREAKING_NEWS = "http://www.nasa.gov/rss/dyn/breaking_news.rss";
@@ -43,7 +43,6 @@ public class FragmentBreakingNews extends Fragment {
 
         newsItems = new ArrayList<>();
         listViewNews = (ListView) getActivity().findViewById (R.id.lvNews);
-
 
         /**
          * Establece la acción para cuando el usuario seleccione un elemento de la lista

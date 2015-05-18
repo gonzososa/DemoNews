@@ -11,4 +11,5 @@
     <string name="phone">(044) 5555555</string>
     <string name="correo">Correo: </string>
     <string name="mail">gonzasosa@outlook.com</string>
+    <string name="thumb">Imagen miniatura</string>
 </resources>

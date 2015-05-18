@@ -5,6 +5,7 @@ import android.graphics.BitmapFactory;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -32,6 +33,9 @@ import java.net.URL;
  */
 public class FragmentDetailedNews extends Fragment {
     ImageView imageView;
+    TextView pubDate;
+    TextView title;
+    TextView content;
 
     @Override
     public View onCreateView (LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -43,12 +47,28 @@ public class FragmentDetailedNews extends Fragment {
         super.onActivityCreated (savedInstanceState);
         if (savedInstanceState != null) return;
 
-        // "inflamos" los elementos de la interfaz
-        TextView pubDate    = (TextView) getActivity().findViewById (R.id.detailedNews_datePub);
-        TextView title      = (TextView) getActivity().findViewById (R.id.detailedNews_title);
-        TextView content    = (TextView) getActivity().findViewById (R.id.detailedNews_content);
-        imageView           = (ImageView) getActivity().findViewById (R.id.detailedNews_thumb);
+        final SwipeRefreshLayout refreshDetailedNews =
+                (SwipeRefreshLayout) getActivity().findViewById (R.id.refreshDetailedNews);
 
+        refreshDetailedNews.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                loadDetails ();
+                if (refreshDetailedNews.isRefreshing ())
+                    refreshDetailedNews.setRefreshing (false);
+            }
+        });
+
+        // "inflamos" los elementos de la interfaz
+        pubDate     = (TextView) getActivity().findViewById (R.id.detailedNews_datePub);
+        title       = (TextView) getActivity().findViewById (R.id.detailedNews_title);
+        content     = (TextView) getActivity().findViewById (R.id.detailedNews_content);
+        imageView   = (ImageView) getActivity().findViewById (R.id.detailedNews_thumb);
+
+        loadDetails();
+    }
+
+    void loadDetails () {
         // asignamos los valores correspodientes
         pubDate.setText (Globals.itemSelected.PubDate);
         title.setText   (Globals.itemSelected.Title);
