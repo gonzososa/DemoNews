@@ -1,4 +1,4 @@
-package com.outlook.gonzasosa.demos.news;
+package com.outlook.gonzasosa.demos.news.util;
 
 import android.net.Uri;
 import java.util.Date;

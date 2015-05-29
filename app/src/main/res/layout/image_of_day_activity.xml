@@ -12,7 +12,7 @@
             android:indeterminate="true"
             style="?android:attr/progressBarStyle" />
 
-        <com.outlook.gonzasosa.demos.news.TouchImageView
+        <com.outlook.gonzasosa.demos.news.util.TouchImageView
             android:id="@+id/iv_imageOfDay"
             android:layout_width="match_parent"
             android:layout_height="match_parent"

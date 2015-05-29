@@ -7,6 +7,12 @@ import android.support.v4.app.NavUtils;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 
+import com.outlook.gonzasosa.demos.news.fragments.FragmentBreakingNews;
+import com.outlook.gonzasosa.demos.news.fragments.FragmentDetailedNews;
+import com.outlook.gonzasosa.demos.news.interfaces.OnNewsSelected;
+import com.outlook.gonzasosa.demos.news.util.Globals;
+import com.outlook.gonzasosa.demos.news.util.NASANewsItem;
+
 /**
  * Esta clase se encarga de mostrar el listado con las entradas RSS y maneja el evento
  * onItemClick del ListView

@@ -7,6 +7,9 @@ import android.support.v4.app.NavUtils;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 
+import com.outlook.gonzasosa.demos.news.fragments.FragmentDetailedNews;
+import com.outlook.gonzasosa.demos.news.util.Globals;
+
 /**
  * Esta clase maneja la actividad correspondiente al detalle de la
  * noticia seleccionada en el ListView

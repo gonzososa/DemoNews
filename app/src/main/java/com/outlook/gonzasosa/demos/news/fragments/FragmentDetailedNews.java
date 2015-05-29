@@ -1,4 +1,4 @@
-package com.outlook.gonzasosa.demos.news;
+package com.outlook.gonzasosa.demos.news.fragments;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -13,6 +13,9 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.outlook.gonzasosa.demos.news.R;
+import com.outlook.gonzasosa.demos.news.util.Globals;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;

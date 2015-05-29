@@ -4,7 +4,7 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <fragment class="com.outlook.gonzasosa.demos.news.FragmentBreakingNews"
+        <fragment class="com.outlook.gonzasosa.demos.news.fragments.FragmentBreakingNews"
             android:id="@+id/frgBreakingNews"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />

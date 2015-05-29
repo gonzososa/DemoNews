@@ -1,4 +1,4 @@
-package com.outlook.gonzasosa.demos.news;
+package com.outlook.gonzasosa.demos.news.fragments;
 
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -13,6 +13,9 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.outlook.gonzasosa.demos.news.R;
+import com.outlook.gonzasosa.demos.news.interfaces.OnNewsSelected;
+import com.outlook.gonzasosa.demos.news.util.NASANewsItem;
 import com.shirwa.simplistic_rss.RssItem;
 import com.shirwa.simplistic_rss.RssReader;
 

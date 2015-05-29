@@ -14,6 +14,7 @@ import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
+import com.outlook.gonzasosa.demos.news.util.TouchImageView;
 import com.shirwa.simplistic_rss.RssItem;
 import com.shirwa.simplistic_rss.RssReader;
 
